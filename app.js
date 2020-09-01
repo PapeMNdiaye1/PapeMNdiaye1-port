@@ -1,4 +1,5 @@
 const body = document.body;
+/*#########################################################################*/
 const theCursor = document.querySelector("#cursor");
 const all = document.querySelectorAll(".all");
 const titletabs = document.querySelectorAll(".tab");
@@ -9,28 +10,38 @@ const tabs = document.getElementsByClassName("tab");
 const stuffs = document.getElementsByClassName("stuffs");
 const presantation = document.querySelector("#pres_invi");
 const turbulence = document.querySelector("#turbulence");
-// #####################
+const mobilesPresTitle = document.querySelector(".mobiles_pres_title");
+const mobilesPresDescription = document.querySelector(
+  ".mobiles_pres_description"
+);
+/*#########################################################################*/
 const pres_title = document.querySelector("#pres_title");
 const workNavbar = document.querySelector("#work_navbar");
 const web_work = document.querySelector(".web_work");
 const mobile_work = document.querySelector(".mobile_work");
+const mobilesImages = document.querySelectorAll(".mobiles_image");
 const perso_work = document.querySelector(".preso_work");
 const work_tabs = document.querySelectorAll(".work_tabs");
 const sckils = document.querySelectorAll(".sckils");
 const stuffsImgInternes = document.querySelectorAll(".stuffs_img_interne");
 const presantation_child = document.querySelector(".presantation");
-
-// #####################
+/*#########################################################################*/
 const technoPresantation = document.querySelector(".techno_presantation");
+const mobilesPresInvi = document.querySelector("#mobiles_pres_invi");
+const closeMobilesPres = document.querySelector(" .close_mobiles_pres_invi");
+const mobilesPresImageContainer = document.querySelector(
+  ".mobiles_pres_image_container"
+);
 const technoExperienc = document.querySelector(".techno_experienc");
 const technoLogo = document.querySelector(".techno_logo");
 const contact = document.querySelector("#contact");
-/*################################################################################*/
+/*#########################################################################*/
+const Mobiles = document.querySelectorAll(".mobiles");
+/*#########################################################################*/
 /*
   !#############################      CLASS     ################################
 */
-/*################################################################################*/
-
+/*#########################################################################*/
 class Carousel {
   constructor(container, options = {}) {
     this.container = container.children[0];
@@ -125,7 +136,7 @@ class Carousel {
   }
 }
 
-/*########################################################################*/
+/*#########################################################################*/
 /*
   !###########################   FUNCTIOS   #############################
 */
@@ -133,7 +144,7 @@ class Carousel {
 
 // ?                                      MODE-TRANSITION
 
-const darckmode = (
+function darckmode(
   a = "",
   b = "",
   c = "",
@@ -142,16 +153,16 @@ const darckmode = (
   f = "",
   g = "",
   h = ""
-) => {
+) {
   mode1.style.display = a;
   mode2.style.display = b;
   mode_check.style.left = c;
-  body.style.setProperty("--color_worck_navbar", d);
+  body.style.setProperty("--color_work_navbarr", d);
   body.style.setProperty("--color0", e);
   body.style.setProperty("--colorX", f);
   body.style.setProperty("--color_bak", g);
   body.style.setProperty("--color_tab_hover", h);
-};
+}
 
 function theme(e) {
   const item = e.target;
@@ -252,6 +263,7 @@ function tabOver(e) {
   this.style.left = "65%";
   this.style.background = "var(--color_tab_hover)";
   this.style.color = "var(--color0)";
+
   if (item.innerText === "DESIGNE" || item.innerText === "CONTACT") {
     this.style.left = "65%";
   }
@@ -265,12 +277,13 @@ function tabOut() {
 // ?                                      STUFFS
 
 function stuffClick(e) {
-  var stuffY = this.parentNode.parentNode.getBoundingClientRect().y;
-  var stuffX = this.parentNode.parentNode.getBoundingClientRect().x;
-  var stuffW = this.parentNode.parentNode.getBoundingClientRect().width;
-  var stuffH = this.parentNode.parentNode.getBoundingClientRect().height;
-  var theTop = ((e.clientY - stuffY) / stuffH) * 100 + "%";
-  var theLeft = ((e.clientX - stuffX) / stuffW) * 100 + "%";
+  let stuffY = this.parentNode.parentNode.getBoundingClientRect().y;
+  let stuffX = this.parentNode.parentNode.getBoundingClientRect().x;
+  let stuffW = this.parentNode.parentNode.getBoundingClientRect().width;
+  let stuffH = this.parentNode.parentNode.getBoundingClientRect().height;
+
+  let theTop = ((e.clientY - stuffY) / stuffH) * 100 + "%";
+  let theLeft = ((e.clientX - stuffX) / stuffW) * 100 + "%";
 
   body.style.setProperty("--stufs_top", theTop);
   body.style.setProperty("--stufs_left", theLeft);
@@ -285,10 +298,11 @@ function stuffClick(e) {
 
   var presH = presantation_child.getBoundingClientRect().height;
   var allpresH = presantation.getBoundingClientRect().height;
-  var presTop = (((allpresH - presH) / 2) * 100) / allpresH + "%";
 
+  var presTop = (((allpresH - presH) / 2) * 100) / allpresH + "%";
   var presW = presantation_child.getBoundingClientRect().width;
   var allpresW = presantation.getBoundingClientRect().width;
+
   var presLeft = (((allpresW - presW) / 2) * 100) / allpresW + "%";
 
   presantation_child.style.top = presTop;
@@ -296,6 +310,71 @@ function stuffClick(e) {
 
   var title = this.children[1].innerText;
   pres_title.innerText = title;
+}
+
+// ?                                     MOBILE STUFFS
+function mobileStuffClick(mobile_stuff, e) {
+  let mobileStuffH = mobile_stuff.parentNode.getBoundingClientRect().height;
+  let mobileStuffW = mobile_stuff.parentNode.getBoundingClientRect().width;
+
+  let mobileStuffX = mobile_stuff.parentNode.getBoundingClientRect().x;
+  let mobileStuffY = mobile_stuff.parentNode.getBoundingClientRect().y;
+
+  let mobile_project_title = mobile_stuff.children[0].children[0].innerHTML;
+  let mobile_project_description = mobile_stuff.children[2].innerHTML;
+
+  mobilesPresTitle.innerHTML = mobile_project_title;
+  mobilesPresDescription.innerHTML = mobile_project_description;
+
+  let theTop = ((e.clientY - mobileStuffY) / mobileStuffH) * 100 + "%";
+  let theLeft = ((e.clientX - mobileStuffX) / mobileStuffW) * 100 + "%";
+
+  body.style.setProperty("--mobile_stufs_top", theTop);
+  body.style.setProperty("--mobile_stufs_left", theLeft);
+  body.style.setProperty("--mobile_stufs_opacity", ".4");
+  body.style.setProperty("--mobile_stufs_dimensions", "240");
+
+  // 771703398
+
+  const imagesA = [
+    "url('./style/images/Screenshot_20200922-182024.png')",
+    "url('./style/images/Screenshot_20200922-181701.png')",
+    "url('./style/images/Screenshot_20200922-181756.png')",
+  ];
+
+  const imagesB = [
+    "url('./style/images/8af15509f80a6109b8051df2c3bd04d1.jpg')",
+    "url('./style/images/8af15509f80a6109b8051df2c3bd04d1.jpg')",
+    "url('./style/images/8af15509f80a6109b8051df2c3bd04d1.jpg')",
+  ];
+
+  const imagesC = [
+    "url('./style/images/48325806467331c03c99e98fda4a0cd4.jpg')",
+    "url('./style/images/48325806467331c03c99e98fda4a0cd4.jpg')",
+    "url('./style/images/48325806467331c03c99e98fda4a0cd4.jpg')",
+  ];
+
+  if (mobile_stuff === Mobiles[0]) {
+    for (let i = 0; i < mobilesImages.length; i++) {
+      mobilesImages[i].style.backgroundImage = imagesA[i];
+    }
+  } else if (mobile_stuff === Mobiles[1]) {
+    for (let i = 0; i < mobilesImages.length; i++) {
+      mobilesImages[i].style.backgroundImage = imagesB[i];
+    }
+  } else {
+    for (let i = 0; i < mobilesImages.length; i++) {
+      mobilesImages[i].style.backgroundImage = imagesC[i];
+    }
+  }
+
+  workNavbar.style.zIndex = "2";
+  mobilesPresInvi.style.display = "flex";
+
+  mobilesPresInvi.addEventListener("onanimationend", () => {
+    console.log("nimp");
+    mobilesPresInvi.style.background = "red";
+  });
 }
 
 // ?                                      WORK
@@ -306,27 +385,28 @@ const work = (e) => {
     mobile_work.classList.remove("mobile_work_visible");
     perso_work.classList.remove("preso_work_visible");
     work_tabs.forEach((tabs) => {
-      tabs.classList.remove("activ_tab");
+      tabs.classList.remove("active_tab");
     });
-    item.classList.add("activ_tab");
+    item.classList.add("active_tab");
   } else if (item.innerText === "Mobile") {
     web_work.classList.remove("web_work_visible");
     mobile_work.classList.add("mobile_work_visible");
     perso_work.classList.remove("preso_work_visible");
     work_tabs.forEach((tabs) => {
-      tabs.classList.remove("activ_tab");
+      tabs.classList.remove("active_tab");
     });
-    item.classList.add("activ_tab");
+    item.classList.add("active_tab");
   } else if (item.innerText === "Perso") {
     web_work.classList.remove("web_work_visible");
     mobile_work.classList.remove("mobile_work_visible");
     perso_work.classList.add("preso_work_visible");
     work_tabs.forEach((tabs) => {
-      tabs.classList.remove("activ_tab");
+      tabs.classList.remove("active_tab");
     });
-    item.classList.add("activ_tab");
+    item.classList.add("active_tab");
   }
 };
+
 // ?                                      SCKILS
 
 const technoInfo = (i) => {
@@ -350,6 +430,15 @@ const technoInfo = (i) => {
   logoContainer.innerHTML = "";
   logoContainer.appendChild(logo);
 };
+
+closeMobilesPres.addEventListener("click", () => {
+  body.style.setProperty("--mobile_stufs_opacity", "");
+  body.style.setProperty("--mobile_stufs_dimensions", "");
+
+  workNavbar.style.zIndex = "3";
+
+  mobilesPresInvi.style.display = "none";
+});
 /*################################################################################*/
 /*
 !#############################      EVENTS      ##############################
@@ -378,13 +467,41 @@ for (stuff of stuffs) {
   stuff.addEventListener("click", stuffClick);
 }
 // ################################################################
+// ################################################################
+for (mobileImage of mobilesImages) {
+  mobileImage.addEventListener("click", (e) => {
+    mobilesImages.forEach((mobileImage) => {
+      mobileImage.style.zIndex = "";
+      mobileImage.style.transform = "";
+      mobileImage.style.top = "";
+    });
+    e.target.style.zIndex = "5";
+    e.target.style.top = "10%";
+    e.target.style.transform = "scale(1.05)";
+  });
+  mobileImage.addEventListener("mouseout", () => {
+    mobilesImages.forEach((mobileImage) => {
+      mobileImage.style.zIndex = "";
+      mobileImage.style.transform = "";
+      mobileImage.style.top = "";
+    });
+  });
+}
+// ################################################################
 workNavbar.addEventListener("click", (e) => {
   work(e);
 });
 // ################################################################
+
 for (let i = 0; i < sckils.length; i++) {
   sckils[i].addEventListener("click", () => {
     technoInfo(i);
+  });
+}
+// ################################################################
+for (let i = 0; i < Mobiles.length; i++) {
+  Mobiles[i].addEventListener("click", (e) => {
+    mobileStuffClick(Mobiles[i], e);
   });
 }
 // ##############################################################
@@ -448,3 +565,9 @@ const positionOfContacteInfo = (index) => {
   contactCartInfos[index].style.opacity = "1";
   contactCartInfos[index].style.zIndex = "14";
 };
+
+/* 
+multi cursor : alt + click 
+
+
+*/
