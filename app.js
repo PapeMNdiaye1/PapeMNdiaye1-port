@@ -11,9 +11,7 @@ const stuffs = document.getElementsByClassName("stuffs");
 const presantation = document.querySelector("#pres_invi");
 const turbulence = document.querySelector("#turbulence");
 const mobilesPresTitle = document.querySelector(".mobiles_pres_title");
-const mobilesPresDescription = document.querySelector(
-  ".mobiles_pres_description"
-);
+const mobilesPresDescription = document.querySelector(".mobiles_pres_description");
 /*#########################################################################*/
 const pres_title = document.querySelector("#pres_title");
 const workNavbar = document.querySelector("#work_navbar");
@@ -28,20 +26,25 @@ const presantation_child = document.querySelector(".presantation");
 /*#########################################################################*/
 const technoPresantation = document.querySelector(".techno_presantation");
 const mobilesPresInvi = document.querySelector("#mobiles_pres_invi");
-const closeMobilesPres = document.querySelector(" .close_mobiles_pres_invi");
-const mobilesPresImageContainer = document.querySelector(
-  ".mobiles_pres_image_container"
-);
+const closeMobilesPres = document.querySelector(".close_mobiles_pres_invi");
+const mobilesPresImageContainer = document.querySelector(".mobiles_pres_image_container");
 const technoExperienc = document.querySelector(".techno_experienc");
 const technoLogo = document.querySelector(".techno_logo");
 const contact = document.querySelector("#contact");
 /*#########################################################################*/
 const Mobiles = document.querySelectorAll(".mobiles");
+const CourenteDesigne  = document.querySelector(".courente_designe ");
+const AllDesigne = document.querySelectorAll('.one_designe')  
+const AllDesigneNav  = document.querySelectorAll(".designe_nav");
+const DesignesMovers  = document.querySelector(".designes_movers");
+
+
 /*#########################################################################*/
 /*
   !#############################      CLASS     ################################
 */
 /*#########################################################################*/
+
 class Carousel {
   constructor(container, options = {}) {
     this.container = container.children[0];
@@ -142,7 +145,7 @@ class Carousel {
 */
 /*#########################################################################*/
 
-// ?                                      MODE-TRANSITION
+// ?                                    MODE-TRANSITION
 
 function darckmode(
   a = "",
@@ -467,7 +470,6 @@ for (stuff of stuffs) {
   stuff.addEventListener("click", stuffClick);
 }
 // ################################################################
-// ################################################################
 for (mobileImage of mobilesImages) {
   mobileImage.addEventListener("click", (e) => {
     mobilesImages.forEach((mobileImage) => {
@@ -567,8 +569,31 @@ const positionOfContacteInfo = (index) => {
 
 };
 
-/* 
-multi cursor : alt + click 
+// ################################################################
+
+for (let i = 0; i < AllDesigne.length; i++ ) {
+  AllDesigne[i].addEventListener('click' , () => {
+   let theDesigne = getComputedStyle(AllDesigne[i]).backgroundImage;
+  CourenteDesigne.style.backgroundImage=theDesigne;
+ })
+}
+
+for (let i = 0; i < AllDesigneNav.length; i++ ) {
+AllDesigneNav[i].children[0].addEventListener('click', ()=>{
+  let DesignesMoverPosition = getComputedStyle(DesignesMovers).left;
+  let DesignesMoverWidth = getComputedStyle(DesignesMovers).width;
+  let DesignesMoverPositionValue = parseInt(DesignesMoverPosition.slice(0, -2));
+  let DesignesMoverWidthValue = parseInt(DesignesMoverWidth.slice(0, -2));
+
+  console.log(DesignesMoverWidthValue)
+  console.log(DesignesMoverPositionValue)
+
+  if ( AllDesigneNav[i].children[0] ===  AllDesigneNav[0].children[0]) {
+    DesignesMovers.style.left=`${DesignesMoverPositionValue + 273}px`
+  }else{
+    DesignesMovers.style.left=`${DesignesMoverPositionValue - 273}px`
+  }
+})
+}
 
 
-*/

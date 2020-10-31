@@ -1,12 +1,13 @@
+@mixin cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #designe {
   background: var(--color0);
   z-index: 1;
   display: none;
-  #designe_background {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-  }
+
   #designe_title {
     position: absolute;
     top: 2%;
@@ -18,90 +19,92 @@
     z-index: 10;
     filter: url(#shad);
   }
-  .all_desinge_container {
-    position: absolute;
-    top: 10%;
+  .designe_container {
     width: 100%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    @include cent;
     flex-wrap: wrap;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    .designe_post_grid {
-      width: 48em;
-      display: grid;
-      grid-template-columns: 15em 15em 15em;
-      grid-column-gap: 1.5em;
-      grid-row-gap: 1.5em;
-      grid-template-rows: 8em 8em 8em;
-    }
-    .designe_post {
-      background: salmon;
-      background-size: 100%;
-      background-position: center;
-      border-radius: 0.2em;
-      filter: grayscale(100%);
-      height: 8em;
-      transition: all 1s;
-      &:hover {
-        filter: grayscale(0%);
-        z-index: 2;
+    .designe_overlay {
+      margin: auto;
+      margin-top: 5%;
+      width: 90%;
+      height: 55%;
+      background-color: var(--color0);
+      border-radius: 0.5em;
+      box-shadow: $shadow0;
+      overflow: hidden;
+      .courente_designe {
+        width: 55%;
+        height: 96%;
+        margin: 1%;
+        background-image: url(images/NewConverse2.jpg);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
-    .designe_post1 {
-      // background-image: url("images/designe1.jpg");
-      top: -0.2em;
-      left: -0.2em;
-    }
-    .designe_post2 {
-      // background-image: url("images/designe2.jpg");
+    .all_designes_container {
+      margin: auto;
+      margin-top: 2%;
+      width: 100%;
+      height: 20%;
+      @include cent;
+      .designes_slider_container {
+        width: 83%;
+        height: 100%;
+        overflow: hidden;
+        .designes_movers {
+          width: 170em;
+          height: 100%;
+          @include cent;
+          left: -7px;
+          transition-duration: 1s;
+          .one_designe {
+            width: 17em;
+            height: 90%;
+            margin: auto;
+            background-image: url(images/Laern-To-Code-Now2.jpg);
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: scale(1);
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          .one_designe:nth-child(2) {
+            background-image: url(images/NewConverse2.jpg);
+          }
+          .one_designe:nth-child(3) {
+            background-image: url(images/Typographi2.jpg);
+          }
+          .one_designe:nth-child(4) {
+            background-image: url(images/PAPE.jpg);
+          }
+        }
+      }
 
-      top: 0.5em;
-      left: -0.1em;
-    }
-    .designe_post3 {
-      // background-image: url("images/designe3.jpg");
-
-      top: 0em;
-      left: 1.2em;
-    }
-    .designe_post4 {
-      // background-image: url("images/designe4.jpg");
-
-      top: 0em;
-      left: 1.2em;
-    }
-    .designe_post5 {
-      // background-image: url("images/designe5.jpg");
-
-      top: 0.4em;
-      left: 1.2em;
-    }
-    .designe_post6 {
-      // background-image: url("images/designe6.jpg");
-
-      top: 0.8em;
-      left: 1.5em;
-    }
-    .designe_post7 {
-      // background-image: url("images/designe7.jpg");
-      top: 0.8em;
-      left: 0.5em;
-    }
-    .designe_post8 {
-      // background-image: url("images/designe8.jpg");
-      top: 0.8em;
-      left: 0.5em;
-    }
-    .designe_post9 {
-      // background-image: url("images/designe9.jpg");
-      top: 0.8em;
-      left: 0.5em;
+      .designe_nav {
+        background: var(--color0);
+        border-radius: 0em 0.5em 0.5em 0em;
+        width: 3em;
+        height: 100%;
+        @include cent;
+        box-shadow: $shadow0;
+        ion-icon {
+          cursor: pointer;
+          font-size: 2em;
+          &:hover {
+            font-size: 3em;
+          }
+          &:active {
+            font-size: 2em;
+          }
+        }
+      }
+      .designe_nav:nth-child(1) {
+        border-radius: 0.5em 0em 0em 0.5em;
+      }
     }
   }
 }

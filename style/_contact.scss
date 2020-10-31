@@ -7,6 +7,7 @@
   background: var(--color0);
   z-index: 4;
   display: none;
+
   #contact_title {
     position: absolute;
     top: 2%;
@@ -18,11 +19,13 @@
     z-index: 10;
     filter: url(#shad);
   }
+
   .contact_container_flex {
     height: 100%;
     width: 100%;
     @include cent;
     align-items: center;
+
     .contact_container {
       @include cent;
       flex-direction: column;
@@ -34,6 +37,7 @@
         text-decoration: none;
       }
       .contact_cart {
+        cursor: pointer;
         font-size: 4em;
         font-stretch: condensed;
         color: var(--color0);
@@ -63,6 +67,7 @@
         left: -35%;
       }
     }
+
     .contact_cart_info {
       @include cent;
       color: var(--color0);
@@ -74,7 +79,6 @@
       transition: all 1s;
       position: absolute;
       user-select: none;
-      // background: salmon;
     }
     .contact_cart_info:nth-child(2) {
       top: 50%;

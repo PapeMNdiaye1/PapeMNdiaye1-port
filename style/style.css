@@ -161,9 +161,9 @@ strong {
   position: absolute;
   width: 30%;
   height: 7em;
-  top: 40%;
+  top: 38%;
   left: 45%;
-  font-size: 0.6em;
+  font-size: 0.8em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -680,7 +680,7 @@ strong {
   width: 50%;
   margin-top: 2%;
   margin-left: 1em;
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-weight: 900;
 }
 
@@ -753,15 +753,15 @@ strong {
 }
 
 #all #work .stuffs_img1b {
-  background-image: url(images/website1a.png);
+  background-image: url(images/website1.png);
 }
 
 #all #work .stuffs_img1c {
-  background-image: url(images/website1b.png);
+  background-image: url(images/website1.png);
 }
 
 #all #work .stuffs_img1d {
-  background-image: url(images/website1d.png);
+  background-image: url(images/website1.png);
 }
 
 #all #work .stuffs_img1e {
@@ -769,7 +769,7 @@ strong {
 }
 
 #all #work .stuffs_img2a {
-  background-image: url(images/website2.png);
+  background-image: url(images/website2.jpg);
   z-index: 1;
   display: block;
 }
@@ -791,7 +791,7 @@ strong {
 }
 
 #all #work .stuffs_img3a {
-  background-image: url(images/website3.jpg);
+  background-image: url(images/website3.png);
   z-index: 1;
   display: block;
 }
@@ -813,7 +813,7 @@ strong {
 }
 
 #all #work .stuffs_img4a {
-  background-image: url(images/website4.jpg);
+  background-image: url(images/website4.png);
   z-index: 1;
   display: block;
 }
@@ -835,7 +835,7 @@ strong {
 }
 
 #all #work .stuffs_img5a {
-  background-image: url(images/website5.gif);
+  background-image: url(images/website5.png);
   z-index: 1;
   display: block;
 }
@@ -857,7 +857,7 @@ strong {
 }
 
 #all #work .stuffs_img6a {
-  background-image: url(images/website6.jpg);
+  background-image: url(images/website6.png);
   z-index: 1;
   display: block;
 }
@@ -1238,7 +1238,7 @@ strong {
 
 #all #work .mobile_work #mobiles_pres_invi .mobiles_pres_description_container div .mobiles_pres_description {
   width: 100%;
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 #all #work .mobile_work #mobiles_pres_invi .mobiles_pres_description_container div .techno_use {
@@ -1353,12 +1353,6 @@ strong {
   display: none;
 }
 
-#all #designe #designe_background {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-}
-
 #all #designe #designe_title {
   position: absolute;
   top: 2%;
@@ -1372,11 +1366,9 @@ strong {
           filter: url(#shad);
 }
 
-#all #designe .all_desinge_container {
-  position: absolute;
-  top: 10%;
+#all #designe .designe_container {
   width: 100%;
-  height: 90%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1388,87 +1380,131 @@ strong {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
-#all #designe .all_desinge_container::-webkit-scrollbar {
-  display: none;
+#all #designe .designe_container .designe_overlay {
+  margin: auto;
+  margin-top: 5%;
+  width: 90%;
+  height: 55%;
+  background-color: var(--color0);
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
-#all #designe .all_desinge_container .designe_post_grid {
-  width: 48em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 15em 15em 15em;
-      grid-template-columns: 15em 15em 15em;
-  grid-column-gap: 1.5em;
-  grid-row-gap: 1.5em;
-  -ms-grid-rows: 8em 8em 8em;
-      grid-template-rows: 8em 8em 8em;
-}
-
-#all #designe .all_desinge_container .designe_post {
-  background: salmon;
+#all #designe .designe_container .designe_overlay .courente_designe {
+  width: 55%;
+  height: 96%;
+  margin: 1%;
+  background-image: url(images/NewConverse2.jpg);
   background-size: 100%;
   background-position: center;
-  border-radius: 0.2em;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  height: 8em;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  background-repeat: no-repeat;
 }
 
-#all #designe .all_desinge_container .designe_post:hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-  z-index: 2;
+#all #designe .designe_container .all_designes_container {
+  margin: auto;
+  margin-top: 2%;
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#all #designe .all_desinge_container .designe_post1 {
-  top: -0.2em;
-  left: -0.2em;
+#all #designe .designe_container .all_designes_container .designes_slider_container {
+  width: 83%;
+  height: 100%;
+  overflow: hidden;
 }
 
-#all #designe .all_desinge_container .designe_post2 {
-  top: 0.5em;
-  left: -0.1em;
+#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers {
+  width: 170em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: -7px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
-#all #designe .all_desinge_container .designe_post3 {
-  top: 0em;
-  left: 1.2em;
+#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe {
+  width: 17em;
+  height: 90%;
+  margin: auto;
+  background-image: url(images/Laern-To-Code-Now2.jpg);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-#all #designe .all_desinge_container .designe_post4 {
-  top: 0em;
-  left: 1.2em;
+#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-#all #designe .all_desinge_container .designe_post5 {
-  top: 0.4em;
-  left: 1.2em;
+#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe:nth-child(2) {
+  background-image: url(images/NewConverse2.jpg);
 }
 
-#all #designe .all_desinge_container .designe_post6 {
-  top: 0.8em;
-  left: 1.5em;
+#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe:nth-child(3) {
+  background-image: url(images/Typographi2.jpg);
 }
 
-#all #designe .all_desinge_container .designe_post7 {
-  top: 0.8em;
-  left: 0.5em;
+#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe:nth-child(4) {
+  background-image: url(images/PAPE.jpg);
 }
 
-#all #designe .all_desinge_container .designe_post8 {
-  top: 0.8em;
-  left: 0.5em;
+#all #designe .designe_container .all_designes_container .designe_nav {
+  background: var(--color0);
+  border-radius: 0em 0.5em 0.5em 0em;
+  width: 3em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-#all #designe .all_desinge_container .designe_post9 {
-  top: 0.8em;
-  left: 0.5em;
+#all #designe .designe_container .all_designes_container .designe_nav ion-icon {
+  cursor: pointer;
+  font-size: 2em;
+}
+
+#all #designe .designe_container .all_designes_container .designe_nav ion-icon:hover {
+  font-size: 3em;
+}
+
+#all #designe .designe_container .all_designes_container .designe_nav ion-icon:active {
+  font-size: 2em;
+}
+
+#all #designe .designe_container .all_designes_container .designe_nav:nth-child(1) {
+  border-radius: 0.5em 0em 0em 0.5em;
 }
 
 #all #sckil {
@@ -1747,6 +1783,7 @@ strong {
 }
 
 #all #contact .contact_container_flex .contact_container .contact_cart {
+  cursor: pointer;
   font-size: 4em;
   font-stretch: condensed;
   color: var(--color0);
