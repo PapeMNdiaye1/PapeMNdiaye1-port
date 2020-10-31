@@ -548,15 +548,15 @@ const contactCartInfos = document.querySelectorAll(".contact_cart_info");
 const positionOfContacteInfo = (index) => {
   contactCartInfos.forEach((contactCartInfo) => {
     contactCartInfo.style.top = "";
+    
     contactCartInfo.style.left = "";
     contactCartInfo.style.opacity = "";
     contactCartInfo.style.zIndex = "";
   });
-  let infoW = contactCartInfos[index].getBoundingClientRect().width;
 
+  let infoW = contactCartInfos[index].getBoundingClientRect().width;
   let cartY = contactCarts[index].getBoundingClientRect().y;
   let cartH = contactCarts[index].getBoundingClientRect().height;
-
   let cartX = contactCarts[index].getBoundingClientRect().x;
   let cartW = contactCarts[index].getBoundingClientRect().width;
 
@@ -564,6 +564,7 @@ const positionOfContacteInfo = (index) => {
   contactCartInfos[index].style.left = cartX + cartW - infoW + "px";
   contactCartInfos[index].style.opacity = "1";
   contactCartInfos[index].style.zIndex = "14";
+
 };
 
 /* 

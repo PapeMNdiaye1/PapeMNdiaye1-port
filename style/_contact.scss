@@ -74,10 +74,7 @@
       transition: all 1s;
       position: absolute;
       user-select: none;
-    }
-    .contact_cart_info:nth-child(1) {
-      top: 35%;
-      left: 35%;
+      // background: salmon;
     }
     .contact_cart_info:nth-child(2) {
       top: 50%;
@@ -102,6 +99,10 @@
     .contact_cart_info:nth-child(7) {
       top: 56%;
       left: 75%;
+    }
+    .contact_cart_info:nth-child(8) {
+      top: 35%;
+      left: 35%;
     }
   }
 }

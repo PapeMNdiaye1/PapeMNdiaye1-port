@@ -1817,11 +1817,6 @@ strong {
           user-select: none;
 }
 
-#all #contact .contact_container_flex .contact_cart_info:nth-child(1) {
-  top: 35%;
-  left: 35%;
-}
-
 #all #contact .contact_container_flex .contact_cart_info:nth-child(2) {
   top: 50%;
   left: 55%;
@@ -1850,6 +1845,11 @@ strong {
 #all #contact .contact_container_flex .contact_cart_info:nth-child(7) {
   top: 56%;
   left: 75%;
+}
+
+#all #contact .contact_container_flex .contact_cart_info:nth-child(8) {
+  top: 35%;
+  left: 35%;
 }
 
 /*###########################################################################*/
