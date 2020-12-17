@@ -3,10 +3,12 @@
   justify-content: center;
   align-items: center;
 }
+
 #work {
   background-color: var(--color0);
   z-index: 1;
   display: none;
+
   #work_navbar {
     top: 3%;
     left: 55%;
@@ -22,6 +24,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     .work_tabs {
       width: 20%;
       height: 85%;
@@ -30,21 +33,25 @@
       font-size: 0.7em;
       font-weight: 600;
       cursor: pointer;
+
       &:hover {
         background: var(--colorX);
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
         color: var(--color0);
       }
+
       &:active {
         transform: scale(0.9);
       }
     }
   }
+
   .active_tab {
     background: var(--colorX);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
     color: var(--color0);
   }
+
   #work_title {
     position: absolute;
     top: 2%;
@@ -56,6 +63,7 @@
     z-index: 10;
     filter: url(#shad);
   }
+
   .web_work {
     position: absolute;
     top: 18vh;
@@ -70,6 +78,7 @@
     opacity: 1;
     transition: 1s;
     z-index: 3;
+
     &::after {
       content: "";
       position: absolute;
@@ -84,10 +93,12 @@
       transition: transform 1s, opacity 1s;
       z-index: 3;
     }
+
     .stuffs_contain {
       @include cent;
       z-index: 3;
     }
+
     .stuffs {
       width: 14em;
       height: 10em;
@@ -97,10 +108,12 @@
       box-shadow: 0px 0.5px 24px rgba(0, 0, 0, 0.2);
       z-index: 2;
       cursor: pointer;
+
       &:hover {
         z-index: 4;
         transform: scale(1.05);
       }
+
       &:hover .stuffs_img_interne {
         background-size: 110%;
       }
@@ -145,6 +158,7 @@
         margin-left: 0.3em;
         font-size: 0.8em;
         color: var(--color0);
+
         &::before {
           content: "";
           position: absolute;
@@ -160,28 +174,35 @@
       grid-column: 1;
       grid-row: 1;
     }
+
     .stuffs2 {
       grid-column: 2;
       grid-row: 1;
     }
+
     .stuffs3 {
       grid-column: 3;
       grid-row: 1;
     }
+
     .stuffs4 {
       grid-column: 1;
       grid-row: 2;
     }
+
     .stuffs5 {
       grid-column: 2;
       grid-row: 2;
     }
+
     .stuffs6 {
       grid-column: 3;
       grid-row: 2;
     }
+
     // #################################
   }
+
   #pres_invi {
     position: fixed;
     top: 0;
@@ -190,6 +211,7 @@
     height: 100vh;
     display: none;
     z-index: 30;
+
     .presantation {
       top: 0;
       left: 0;
@@ -202,6 +224,7 @@
       transition: transform 0.5s;
       border: 0.3em var(--color0) solid;
       border-top: 0.3em var(--color0) solid;
+
       #close_pres {
         position: absolute;
         top: -2%;
@@ -222,10 +245,12 @@
           transform: scale(1.1);
           background: var(--color0);
         }
+
         &:active {
           transform: scale(1);
         }
       }
+
       .presantation_img {
         width: 100%;
         height: 67%;
@@ -236,6 +261,7 @@
         border-radius: 0.2em;
         // background: var(--colorX);
       }
+
       .moovingContainer {
         transform: translateX(0);
         height: 100%;
@@ -272,13 +298,16 @@
           text-align: center;
           font-size: 1.7em;
           cursor: pointer;
+
           &:hover {
             transform: scale(1.1);
           }
+
           &:active {
             transform: scale(1);
           }
         }
+
         .invisibel {
           opacity: 0.2;
           pointer-events: none;
@@ -302,6 +331,7 @@
           background-color: #000;
         }
       }
+
       p {
         font-size: 0.7em;
         display: block;
@@ -311,14 +341,17 @@
         font-size: 0.7em;
         font-weight: 900;
       }
+
       #link {
         position: absolute;
         bottom: 5%;
         width: 100%;
         @include cent;
+
         &:hover {
           transform: scale(1.05);
         }
+
         &:active {
           transform: scale(1);
         }
@@ -326,6 +359,7 @@
         a {
           text-decoration: none;
         }
+
         h2 {
           display: block;
           background: var(--colorX);
@@ -341,6 +375,7 @@
       }
     }
   }
+
   .stuffs_img_interne {
     width: 100%;
     height: 102%;
@@ -353,41 +388,52 @@
     transition: background-size 1s;
     overflow: hidden;
   }
+
   .stuffs_img1a {
     background-image: url(images/website1.png);
     z-index: 1;
     display: block;
   }
+
   .stuffs_img1b {
     background-image: url(images/website1.png);
   }
+
   .stuffs_img1c {
     background-image: url(images/website1.png);
   }
+
   .stuffs_img1d {
     background-image: url(images/website1.png);
   }
+
   .stuffs_img1e {
     background-image: url(images/website1.png);
   }
+
   // ###############################################
   .stuffs_img2a {
     background-image: url(images/website2.jpg);
     z-index: 1;
     display: block;
   }
+
   .stuffs_img2b {
     background-image: url(images/website2.png);
   }
+
   .stuffs_img2c {
     background-image: url(images/website2.png);
   }
+
   .stuffs_img2d {
     background-image: url(images/website2.png);
   }
+
   .stuffs_img2e {
     background-image: url(images/website2.png);
   }
+
   // ###############################################
 
   .stuffs_img3a {
@@ -395,72 +441,92 @@
     z-index: 1;
     display: block;
   }
+
   .stuffs_img3b {
     background-image: url(images/website3.jpg);
   }
+
   .stuffs_img3c {
     background-image: url(images/website3.jpg);
   }
+
   .stuffs_img3d {
     background-image: url(images/website3.jpg);
   }
+
   .stuffs_img3e {
     background-image: url(images/website3.jpg);
   }
+
   // ###############################################
   .stuffs_img4a {
     background-image: url(images/website4.png);
     z-index: 1;
     display: block;
   }
+
   .stuffs_img4b {
     background-image: url(images/website4.jpg);
   }
+
   .stuffs_img4c {
     background-image: url(images/website4.jpg);
   }
+
   .stuffs_img4d {
     background-image: url(images/website4.jpg);
   }
+
   .stuffs_img4e {
     background-image: url(images/website4.jpg);
   }
+
   // ###############################################
   .stuffs_img5a {
     background-image: url(images/website5.png);
     z-index: 1;
     display: block;
   }
+
   .stuffs_img5b {
     background-image: url(images/website5.gif);
   }
+
   .stuffs_img5c {
     background-image: url(images/website5.gif);
   }
+
   .stuffs_img5d {
     background-image: url(images/website5.gif);
   }
+
   .stuffs_img5e {
     background-image: url(images/website5.gif);
   }
+
   // ###############################################
   .stuffs_img6a {
     background-image: url(images/website6.png);
     z-index: 1;
     display: block;
   }
+
   .stuffs_img6b {
     background-image: url(images/website6.jpg);
   }
+
   .stuffs_img6c {
     background-image: url(images/website6.jpg);
   }
+
   .stuffs_img6d {
     background-image: url(images/website6.jpg);
   }
+
   .stuffs_img6e {
     background-image: url(images/website6.jpg);
   }
+
   .mobile_work {
     position: absolute;
     top: 110%;
@@ -478,6 +544,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -492,6 +559,7 @@
       transition: transform 1s, opacity 1s;
       z-index: 3;
     }
+
     .mobiles {
       cursor: pointer;
       max-width: 14em;
@@ -509,18 +577,22 @@
       z-index: 1;
       transform: scale(1);
       filter: grayscale(100%);
+
       // transition: all 1s;
       &:hover {
         transform: scale(1.06);
         filter: grayscale(0%);
       }
+
       &:active {
         transform: scale(1);
       }
+
       &:hover .mobiles_title,
       &:hover .creation_date {
         opacity: 0;
       }
+
       .mobiles_title,
       .creation_date {
         position: absolute;
@@ -535,10 +607,12 @@
         border-radius: 0.1em;
         opacity: 1;
         transition: opacity 0.3s;
+
         h1 {
           color: var(--color0);
           font-size: 0.8em;
           margin-left: 5%;
+
           &::after {
             position: absolute;
             content: "";
@@ -550,6 +624,7 @@
           }
         }
       }
+
       .creation_date {
         width: 3em;
         height: 1em;
@@ -558,46 +633,57 @@
         background: rgba(0, 0, 0, 0.3);
         justify-content: center;
         border-radius: 0.1em;
+
         h1 {
           font-size: 0.6em;
           margin-left: 0%;
           color: #fff;
+
           &::after {
             background: transparent;
           }
         }
       }
+
       .mobiles_description {
         display: none;
       }
     }
+
     .mobiles1 {
       background-image: url(images/Screenshot_20200922-182024.png);
       background-size: 100%;
     }
+
     .mobiles2 {
       background-image: url(images/8af15509f80a6109b8051df2c3bd04d1.jpg);
       margin-top: 5em;
+
       .mobiles_title {
         top: -3%;
         left: -7%;
       }
+
       .creation_date {
         top: 1.2%;
         left: 20%;
       }
     }
+
     .mobiles3 {
       background-image: url(images/48325806467331c03c99e98fda4a0cd4.jpg);
+
       .mobiles_title {
         bottom: 13%;
         left: 95%;
       }
+
       .creation_date {
         bottom: 10%;
         left: 99%;
       }
     }
+
     #mobiles_pres_invi {
       position: absolute;
       width: 57em;
@@ -608,6 +694,7 @@
       border-radius: 0.2em;
       @include cent;
       display: none;
+
       .close_mobiles_pres_invi {
         position: absolute;
         top: -1%;
@@ -622,15 +709,18 @@
         font-size: 1em;
         cursor: pointer;
         @include cent;
+
         &:hover {
           opacity: 1;
           transform: scale(1.1);
           background: var(--color0);
         }
+
         &:active {
           transform: scale(1);
         }
       }
+
       .mobiles_pres_image_container {
         width: 50%;
         height: 100%;
@@ -660,6 +750,7 @@
         .mobiles_image:nth-child(1) {
           z-index: 2;
           transform: rotate(10deg) scale(1);
+
           &:hover {
             transform: rotate(0deg) scale(1);
           }
@@ -669,6 +760,7 @@
           top: 10%;
           left: 45%;
           transform: rotate(20deg);
+
           &:hover {
             transform: rotate(0deg) scale(1);
           }
@@ -678,11 +770,13 @@
           top: 5%;
           left: 10%;
           transform: rotate(-20deg);
+
           &:hover {
             transform: rotate(0deg) scale(1);
           }
         }
       }
+
       .mobiles_pres_description_container {
         width: 50%;
         height: 100%;
@@ -692,13 +786,16 @@
         align-items: flex-end;
         padding-bottom: 5%;
         padding-right: 3%;
+
         div {
           width: 100%;
           @include cent;
           flex-wrap: wrap;
+
           .mobiles_pres_title {
             width: 100%;
           }
+
           .mobiles_pres_description {
             width: 100%;
             font-size: 0.7em;
@@ -711,6 +808,7 @@
             justify-content: flex-start;
             flex-wrap: wrap;
             margin-top: 1em;
+
             .techno {
               width: 2em;
               height: 2em;
@@ -718,10 +816,12 @@
               margin-left: 0.5em;
             }
           }
+
           .go_to_project {
             width: 100%;
             height: 1.5em;
             margin-top: 0.5em;
+
             // background: salmon;
             .go_to_project_btn {
               cursor: pointer;
@@ -738,12 +838,15 @@
               background: var(--color0);
               box-shadow: 0px 0.5px 24px rgba(0, 0, 0, 0.2);
               -webkit-user-select: none;
+
               &:hover {
                 transform: scale(1.1);
               }
+
               &:active {
                 transform: scale(1);
               }
+
               a {
                 text-decoration: none;
                 color: var(--colorX);
@@ -754,6 +857,7 @@
       }
     }
   }
+
   .preso_work {
     position: absolute;
     top: 0%;
@@ -766,15 +870,18 @@
     transition: 1s;
     background: gray;
   }
+
   // ######################
   .web_work_visible {
     transition-delay: 0.4s;
     left: 5%;
   }
+
   .mobile_work_visible {
     transition-delay: 0.4s;
     top: 0%;
   }
+
   .preso_work_visible {
     transition-delay: 0.4s;
     left: 0%;

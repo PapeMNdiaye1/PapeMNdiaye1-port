@@ -1,6 +1,7 @@
 $shadow0: 0px 1px 2px rgba(0, 0, 0, 0.3);
 $color0: #f1f1f1;
 $colorX: #222;
+
 body {
   background: var(--color0);
   --color0: #f1f1f1;
@@ -23,15 +24,18 @@ body {
   cursor: url("images/cursor.svg"), auto;
   overflow: hidden;
 }
+
 * {
   margin: 0;
   padding: 0;
   position: relative;
+
   &::selection {
     color: var(--color0);
     background: var(--colorX);
   }
 }
+
 .Hidden_svg {
   background-color: red(red);
   position: absolute;
@@ -44,6 +48,7 @@ body {
   fill: var(--color_bak);
   opacity: 0.7;
 }
+
 strong {
   text-shadow: none;
 }
@@ -61,6 +66,7 @@ strong {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
+
   .all {
     grid-column: 1;
     grid-row: 1;
@@ -84,6 +90,7 @@ strong {
   // ################################################
   @import "./contact";
 }
+
 /*###########################################################################*/
 /*###########################################################################*/
 /*###########################################################################*/

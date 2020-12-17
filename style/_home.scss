@@ -36,6 +36,7 @@
     filter: url(#shad);
   }
   #home_logo {
+    // background-color: salmon/;
     position: absolute;
     top: 35%;
     left: 15%;
@@ -46,20 +47,21 @@
     background-position: center;
     z-index: 1;
     filter: url(#shad);
-    #logo {
-      transform: scale(1.5);
-      .logo0,
-      .logo1,
-      .logo2 {
-        fill: #000;
-        stroke: #000;
-        stroke-linecap: round;
-        stroke-miterlimit: 10;
-      }
-      .logo1 {
-        fill: var(--color0);
-      }
-    }
+    transform: scale(1.5);
+    // #logo {
+    //   transform: scale(2);
+      // .logo0,
+      // .logo1,
+      // .logo2 {
+      //   fill: red;
+      //   stroke: #000;
+      //   stroke-linecap: round;
+      //   stroke-miterlimit: 10;
+      // }
+      // .logo1 {
+      //   fill: var(--color0);
+      // }
+      // }
   }
   #intro {
     position: absolute;

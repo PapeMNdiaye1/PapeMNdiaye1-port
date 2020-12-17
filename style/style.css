@@ -137,24 +137,8 @@ strong {
   z-index: 1;
   -webkit-filter: url(#shad);
           filter: url(#shad);
-}
-
-#all #home #home_logo #logo {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-}
-
-#all #home #home_logo #logo .logo0,
-#all #home #home_logo #logo .logo1,
-#all #home #home_logo #logo .logo2 {
-  fill: #000;
-  stroke: #000;
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
-}
-
-#all #home #home_logo #logo .logo1 {
-  fill: var(--color0);
 }
 
 #all #home #intro {
@@ -1368,143 +1352,18 @@ strong {
 
 #all #designe .designe_container {
   width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#all #designe .designe_container .designe_overlay {
-  margin: auto;
+  height: 95%;
+  background: salmon;
   margin-top: 5%;
-  width: 90%;
-  height: 55%;
-  background-color: var(--color0);
-  border-radius: 0.5em;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
 }
 
-#all #designe .designe_container .designe_overlay .courente_designe {
-  width: 55%;
-  height: 96%;
-  margin: 1%;
-  background-image: url(images/NewConverse2.jpg);
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#all #designe .designe_container .all_designes_container {
-  margin: auto;
-  margin-top: 2%;
-  width: 100%;
+#all #designe .designe_container .network_container {
+  position: absolute;
   height: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#all #designe .designe_container .all_designes_container .designes_slider_container {
-  width: 83%;
-  height: 100%;
-  overflow: hidden;
-}
-
-#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers {
-  width: 170em;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  left: -7px;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
-#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe {
-  width: 17em;
-  height: 90%;
-  margin: auto;
-  background-image: url(images/Laern-To-Code-Now2.jpg);
-  background-size: 80%;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe:nth-child(2) {
-  background-image: url(images/NewConverse2.jpg);
-}
-
-#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe:nth-child(3) {
-  background-image: url(images/Typographi2.jpg);
-}
-
-#all #designe .designe_container .all_designes_container .designes_slider_container .designes_movers .one_designe:nth-child(4) {
-  background-image: url(images/PAPE.jpg);
-}
-
-#all #designe .designe_container .all_designes_container .designe_nav {
-  background: var(--color0);
-  border-radius: 0em 0.5em 0.5em 0em;
+  top: 30%;
+  right: 0%;
   width: 3em;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-#all #designe .designe_container .all_designes_container .designe_nav ion-icon {
-  cursor: pointer;
-  font-size: 2em;
-}
-
-#all #designe .designe_container .all_designes_container .designe_nav ion-icon:hover {
-  font-size: 3em;
-}
-
-#all #designe .designe_container .all_designes_container .designe_nav ion-icon:active {
-  font-size: 2em;
-}
-
-#all #designe .designe_container .all_designes_container .designe_nav:nth-child(1) {
-  border-radius: 0.5em 0em 0em 0.5em;
+  background: seagreen;
 }
 
 #all #sckil {
@@ -1843,7 +1702,7 @@ strong {
   background-color: var(--colorX);
   font-size: 0.6em;
   border: 0.3em var(--colorX) solid;
-  border-radius: 0.1em;
+  border-radius: 0.3em;
   opacity: 0.1;
   -webkit-transition: all 1s;
   transition: all 1s;

@@ -33,10 +33,10 @@ const technoLogo = document.querySelector(".techno_logo");
 const contact = document.querySelector("#contact");
 /*#########################################################################*/
 const Mobiles = document.querySelectorAll(".mobiles");
-const CourenteDesigne  = document.querySelector(".courente_designe ");
-const AllDesigne = document.querySelectorAll('.one_designe')  
-const AllDesigneNav  = document.querySelectorAll(".designe_nav");
-const DesignesMovers  = document.querySelector(".designes_movers");
+// const CourenteDesigne = document.querySelector(".courente_designe ");
+// const AllDesigne = document.querySelectorAll('.one_designe')
+// const AllDesigneNav = document.querySelectorAll(".designe_nav");
+// const DesignesMovers = document.querySelector(".designes_movers");
 
 
 /*#########################################################################*/
@@ -48,12 +48,10 @@ const DesignesMovers  = document.querySelector(".designes_movers");
 class Carousel {
   constructor(container, options = {}) {
     this.container = container.children[0];
-    this.options = Object.assign(
-      {},
-      {
-        slidesToScroll: 1,
-        slidesVisible: 1,
-      },
+    this.options = Object.assign({}, {
+      slidesToScroll: 1,
+      slidesVisible: 1,
+    },
       options
     );
     this.currentItem = 0;
@@ -256,6 +254,7 @@ function tabClick(e) {
   document.documentElement.style.setProperty("--left", left);
   document.documentElement.style.setProperty("--top", top);
 }
+
 function tabOver(e) {
   const item = e.target;
   for (tab of tabs) {
@@ -271,6 +270,7 @@ function tabOver(e) {
     this.style.left = "65%";
   }
 }
+
 function tabOut() {
   this.style.left = "";
   this.style.background = "";
@@ -506,12 +506,22 @@ for (let i = 0; i < Mobiles.length; i++) {
     mobileStuffClick(Mobiles[i], e);
   });
 }
-// ##############################################################
+// ################################################################
 const networkContainer = document.querySelector(".network_container");
 networkContainer.addEventListener("mouseover", () => {
-  tl = new TimelineMax({ paused: true });
-  tl.to(turbulence, 1.5, { attr: { baseFrequency: "0.02 0.02" } }, 0);
-  tl.to(turbulence, 1.5, { attr: { baseFrequency: "0 0" } }, 0.4);
+  tl = new TimelineMax({
+    paused: true
+  });
+  tl.to(turbulence, 1.5, {
+    attr: {
+      baseFrequency: "0.02 0.02"
+    }
+  }, 0);
+  tl.to(turbulence, 1.5, {
+    attr: {
+      baseFrequency: "0 0"
+    }
+  }, 0.4);
   tl.play();
 });
 
@@ -524,9 +534,19 @@ for (let i = 0; i < contactCarts.length; i++) {
     });
     contactCarts[i].style.filter = "url(#noise)";
     contactCarts[i].style.top = "-35%";
-    tl = new TimelineMax({ paused: true });
-    tl.to(turbulence, 0.5, { attr: { baseFrequency: "0.01 0.01" } }, 0);
-    tl.to(turbulence, 0.5, { attr: { baseFrequency: "0 0" } }, 0.3);
+    tl = new TimelineMax({
+      paused: true
+    });
+    tl.to(turbulence, 0.5, {
+      attr: {
+        baseFrequency: "0.01 0.01"
+      }
+    }, 0);
+    tl.to(turbulence, 0.5, {
+      attr: {
+        baseFrequency: "0 0"
+      }
+    }, 0.3);
     tl.play();
     positionOfContacteInfo(i);
   });
@@ -550,7 +570,7 @@ const contactCartInfos = document.querySelectorAll(".contact_cart_info");
 const positionOfContacteInfo = (index) => {
   contactCartInfos.forEach((contactCartInfo) => {
     contactCartInfo.style.top = "";
-    
+
     contactCartInfo.style.left = "";
     contactCartInfo.style.opacity = "";
     contactCartInfo.style.zIndex = "";
@@ -571,29 +591,28 @@ const positionOfContacteInfo = (index) => {
 
 // ################################################################
 
-for (let i = 0; i < AllDesigne.length; i++ ) {
-  AllDesigne[i].addEventListener('click' , () => {
-   let theDesigne = getComputedStyle(AllDesigne[i]).backgroundImage;
-  CourenteDesigne.style.backgroundImage=theDesigne;
- })
-}
+// for (let i = 0; i < AllDesigne.length; i++) {
+//   AllDesigne[i].addEventListener('click', () => {
+//     let theDesigne = getComputedStyle(AllDesigne[i]).backgroundImage;
+//     CourenteDesigne.style.backgroundImage = theDesigne;
+//   })
+// }
 
-for (let i = 0; i < AllDesigneNav.length; i++ ) {
-AllDesigneNav[i].children[0].addEventListener('click', ()=>{
-  let DesignesMoverPosition = getComputedStyle(DesignesMovers).left;
-  let DesignesMoverWidth = getComputedStyle(DesignesMovers).width;
-  let DesignesMoverPositionValue = parseInt(DesignesMoverPosition.slice(0, -2));
-  let DesignesMoverWidthValue = parseInt(DesignesMoverWidth.slice(0, -2));
+// for (let i = 0; i < AllDesigneNav.length; i++) {
+//   AllDesigneNav[i].children[0].addEventListener('click', () => {
+//     let DesignesMoverPosition = getComputedStyle(DesignesMovers).left;
+//     let DesignesMoverWidth = getComputedStyle(DesignesMovers).width;
+//     let DesignesMoverPositionValue = parseInt(DesignesMoverPosition.slice(0, -2));
+//     let DesignesMoverWidthValue = parseInt(DesignesMoverWidth.slice(0, -2));
 
-  console.log(DesignesMoverWidthValue)
-  console.log(DesignesMoverPositionValue)
+//     console.log(DesignesMoverWidthValue)
 
-  if ( AllDesigneNav[i].children[0] ===  AllDesigneNav[0].children[0]) {
-    DesignesMovers.style.left=`${DesignesMoverPositionValue + 273}px`
-  }else{
-    DesignesMovers.style.left=`${DesignesMoverPositionValue - 273}px`
-  }
-})
-}
+//     console.log(DesignesMoverPositionValue)
 
-
+//     if (AllDesigneNav[i].children[0] === AllDesigneNav[0].children[0]) {
+//       DesignesMovers.style.left = `${DesignesMoverPositionValue + 273}px`
+//     } else {
+//       DesignesMovers.style.left = `${DesignesMoverPositionValue - 273}px`
+//     }
+//   })
+// }

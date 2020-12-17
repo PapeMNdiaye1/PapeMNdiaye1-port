@@ -16,825 +16,750 @@
                                                                                                                     -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PAPE M NDIAYE</title>
-    <link rel="shortcut icon" type="image/.jpg" href="style/images/face.jpg" />
-    <link rel="stylesheet" href="style/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Notable&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <svg class="Hidden_svg">
-      <filter id="shad" x="0%" y="0%" width="100%" height="100%">
-        <feOffset in="SourceGraphic" dx="1" dy="1"></feOffset>
-        <feGaussianblur stdDeviation=".5" result="SHAD"></feGaussianblur>
-        <feFlood flood-color="rgba(0,0,0,.3)" result="COLOR"></feFlood>
-        <feComposite
-          in="COLOR"
-          in2="SHAD"
-          operator="in"
-          result="SHADOW"
-        ></feComposite>
-        <feMerge>
-          <feMergeNode in="SHADOW" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-      <filter id="noise" x="0%" y="0%" width="200%" height="130%">
-        <feTurbulence
-          id="turbulence"
-          baseFrequency="0 0"
-          result="NOISE"
-          numOctaves="1"
-        />
-        <feDisplacementMap
-          id="scale"
-          in="SourceGraphic"
-          in2="NOISE"
-          scale="20"
-        />
-      </filter>
-    </svg>
-    <!-- ################################################ -->
-    <div id="left_bar">
-      <div id="face"></div>
 
-      <div id="tabs">
-        <div class="tab" id="tab1">
-          <div class="tab_titel">Home</div>
-          <div class="tab_icon">
-            <ion-icon name="home"></ion-icon>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAPE M NDIAYE</title>
+  <link rel="shortcut icon" type="image/.jpg" href="style/images/face.jpg" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <svg class="Hidden_svg">
+    <filter id="shad" x="0%" y="0%" width="100%" height="100%">
+      <feOffset in="SourceGraphic" dx="1" dy="1"></feOffset>
+      <feGaussianblur stdDeviation=".5" result="SHAD"></feGaussianblur>
+      <feFlood flood-color="rgba(0,0,0,.3)" result="COLOR"></feFlood>
+      <feComposite in="COLOR" in2="SHAD" operator="in" result="SHADOW"></feComposite>
+      <feMerge>
+        <feMergeNode in="SHADOW" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="noise" x="0%" y="0%" width="200%" height="130%">
+      <feTurbulence id="turbulence" baseFrequency="0 0" result="NOISE" numOctaves="1" />
+      <feDisplacementMap id="scale" in="SourceGraphic" in2="NOISE" scale="20" />
+    </filter>
+  </svg>
+  <!-- ################################################ -->
+  <div id="left_bar">
+    <div id="face"></div>
+
+    <div id="tabs">
+      <div class="tab" id="tab1">
+        <div class="tab_titel">Home</div>
+        <div class="tab_icon">
+          <ion-icon name="home"></ion-icon>
         </div>
+      </div>
 
-        <div class="tab">
-          <div class="tab_titel">Projects</div>
-          <div class="tab_icon">
-            <ion-icon name="reader"></ion-icon>
-          </div>
+      <div class="tab">
+        <div class="tab_titel">Projects</div>
+        <div class="tab_icon">
+          <ion-icon name="reader"></ion-icon>
         </div>
+      </div>
 
-        <div class="tab">
-          <div class="tab_titel">Designe</div>
-          <div class="tab_icon">
-            <ion-icon name="brush"></ion-icon>
-          </div>
+      <div class="tab">
+        <div class="tab_titel">Designe</div>
+        <div class="tab_icon">
+          <ion-icon name="brush"></ion-icon>
         </div>
+      </div>
 
-        <div class="tab">
-          <div class="tab_titel">Skills</div>
-          <div class="tab_icon">
-            <ion-icon name="code-working"></ion-icon>
-          </div>
+      <div class="tab">
+        <div class="tab_titel">Skills</div>
+        <div class="tab_icon">
+          <ion-icon name="code-working"></ion-icon>
         </div>
+      </div>
 
-        <div class="tab">
-          <div class="tab_titel tab_titel3">Contact</div>
-          <div class="tab_icon">
-            <ion-icon name="mail"></ion-icon>
-          </div>
+      <div class="tab">
+        <div class="tab_titel tab_titel3">Contact</div>
+        <div class="tab_icon">
+          <ion-icon name="mail"></ion-icon>
         </div>
       </div>
     </div>
-    <!-- #################################################################### -->
-    <!-- #################################################################### -->
-    <!-- #################################################################### -->
-    <!-- #################################################################### -->
-    <div id="all">
-      <div class="all" id="home">
-        <div id="my_name">
-          <h1>PAPE M<strong>.</strong> NDIAYE</h1>
+  </div>
+  <!-- #################################################################### -->
+  <!-- #################################################################### -->
+  <!-- #################################################################### -->
+  <!-- #################################################################### -->
+  <div id="all">
+    <div class="all" id="home">
+      <div id="my_name">
+        <h1>PAPE M<strong>.</strong> NDIAYE</h1>
+      </div>
+
+      <div id="hello">
+        <h1>
+          DESIGNER & FULL-STACK<br />
+          DEVELOPER
+        </h1>
+      </div>
+
+      <div id="tel_gmail">
+        Mail: Pmomar44@gmail.com <br />
+        Tel: 77 727 86 55
+      </div>
+
+      <div id="home_logo">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1366 768">
+          <path d="M406,503c12.18-2.53,15.41-8.3,5-19L298,360l139-138h110L407,362l130,141H406z" />
+          <path d="M959,503c-12.18-2.53-15.41-8.3-5-19l113-124L928,222H818l140,140L828,503H959z" />
+          <path d="M815.5,577.5h42c-9.92-2.38-16.5-6.9-19-14L720.08,222.92c-0.97-2.78-4.8-3.05-6.14-0.42l-131.44,258
+         c-9,14-15.21,17.52-30,23h127c-15.45-7.08-20.63-14.8-18-23l36.61-74.17c1.46-2.96,4.47-4.83,7.77-4.83h62.89
+         c2.83,0,6.35,1.78,7.28,4.45L830.5,563.5C832.5,570.5,823.58,574.53,815.5,577.5z M764.31,394.5h-53.99c-2.71,0-4.5-2.82-3.35-5.27
+         l32.71-69.73c1.04-2.21,5.23-2.06,6.05,0.24l23.34,67.99C770.26,391.03,767.81,394.5,764.31,394.5z" />
+          <path d="M797.23,501.3" />
+        </svg>
+
+      </div>
+
+
+      <div class="network."></div>
+
+      <div class="network_container">
+        <a href="https://github.com/PapeMNdiaye1" target="_blank">
+          <div class="network">
+            <ion-icon name="logo-github"></ion-icon>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/just.a.coder_/" target="_blank">
+          <div class="network">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/pape-momar-ndiaye-37b862199/" target="_blank">
+          <div class="network">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </div>
+        </a>
+
+        <a href="" target="_blank">
+          <div class="network">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </div>
+        </a>
+        <a href="https://twitter.com/Ndiaye53287322" target="_blank">
+          <div class="network">
+            <ion-icon name="logo-tumblr"></ion-icon>
+          </div>
+        </a>
+      </div>
+
+      <div id="intro">
+        <h4 class="intro_title">
+          Lorem ipsum amet consectetur adipisicing elit deleniti saepe. Vitae
+          veritatis provident Lorem ipsum dolor sit amet g elit. Laborum modi
+          ipsquam accusamus, perspiciatis commodi veniam
+        </h4>
+      </div>
+    </div>
+    <!-- ########################################################################### -->
+    <div class="all" id="work">
+      <div id="work_title">
+        <h1>Mes Projets</h1>
+      </div>
+
+      <div id="work_navbar">
+        <div class="work_tabs active_tab">Web</div>
+        <div class="work_tabs">Mobile</div>
+        <div class="work_tabs">Perso</div>
+      </div>
+
+      <div id="pres_invi">
+        <div class="presantation">
+          <div id="close_pres">
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="presantation_img"></div>
+          <h2 id="pres_title">Projname</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam ad
+            voluptatibus quas, dignissimos laboriosam assumenda temporibus
+          </p>
+          <div id="theSliders">
+            <div class="prev">
+              <ion-icon name="caret-back-outline"></ion-icon>
+            </div>
+            <div class="next">
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </div>
+          </div>
+          <div id="link">
+            <a href="nimp">
+              <h2>LIEN VER LE PRODUIT</h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="web_work web_work_visible">
+        <div class="stuffs_contain">
+          <div class="stuffs stuffs1">
+            <div class="stuffs_img">
+              <div class="stuffs_img_interne stuffs_img1a"></div>
+              <div class="stuffs_img_interne stuffs_img1b"></div>
+              <div class="stuffs_img_interne stuffs_img1c"></div>
+              <div class="stuffs_img_interne stuffs_img1d"></div>
+              <div class="stuffs_img_interne stuffs_img1e"></div>
+            </div>
+            <h2 class="stuffs_title">Geek Blog</h2>
+          </div>
         </div>
 
-        <div id="hello">
+        <div class="stuffs_contain">
+          <div class="stuffs stuffs2">
+            <div class="stuffs_img">
+              <div class="stuffs_img_interne stuffs_img2a"></div>
+              <div class="stuffs_img_interne stuffs_img2b"></div>
+              <div class="stuffs_img_interne stuffs_img2c"></div>
+              <div class="stuffs_img_interne stuffs_img2d"></div>
+              <div class="stuffs_img_interne stuffs_img2e"></div>
+            </div>
+            <h2 class="stuffs_title">Projname</h2>
+          </div>
+        </div>
+
+        <div class="stuffs_contain">
+          <div class="stuffs stuffs3">
+            <div class="stuffs_img">
+              <div class="stuffs_img_interne stuffs_img3a"></div>
+              <div class="stuffs_img_interne stuffs_img3b"></div>
+              <div class="stuffs_img_interne stuffs_img3c"></div>
+              <div class="stuffs_img_interne stuffs_img3d"></div>
+              <div class="stuffs_img_interne stuffs_img3e"></div>
+            </div>
+            <h2 class="stuffs_title">Projname</h2>
+          </div>
+        </div>
+
+        <div class="stuffs_contain">
+          <div class="stuffs stuffs4">
+            <div class="stuffs_img">
+              <div class="stuffs_img_interne stuffs_img4a"></div>
+              <div class="stuffs_img_interne stuffs_img4b"></div>
+              <div class="stuffs_img_interne stuffs_img4c"></div>
+              <div class="stuffs_img_interne stuffs_img4d"></div>
+              <div class="stuffs_img_interne stuffs_img4e"></div>
+            </div>
+            <h2 class="stuffs_title">Projname</h2>
+          </div>
+        </div>
+
+        <div class="stuffs_contain">
+          <div class="stuffs stuffs5">
+            <div class="stuffs_img">
+              <div class="stuffs_img_interne stuffs_img5a"></div>
+              <div class="stuffs_img_interne stuffs_img5b"></div>
+              <div class="stuffs_img_interne stuffs_img5c"></div>
+              <div class="stuffs_img_interne stuffs_img5d"></div>
+              <div class="stuffs_img_interne stuffs_img5e"></div>
+            </div>
+            <h2 class="stuffs_title">Projname</h2>
+          </div>
+        </div>
+
+        <div class="stuffs_contain">
+          <div class="stuffs stuffs6">
+            <div class="stuffs_img">
+              <div class="stuffs_img_interne stuffs_img6a"></div>
+              <div class="stuffs_img_interne stuffs_img6b"></div>
+              <div class="stuffs_img_interne stuffs_img6c"></div>
+              <div class="stuffs_img_interne stuffs_img6d"></div>
+              <div class="stuffs_img_interne stuffs_img6e"></div>
+            </div>
+            <h2 class="stuffs_title">Projname</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile_work">
+        <div class="mobiles mobiles1">
+          <div class="mobiles_title">
+            <h1>Geek Blog</h1>
+          </div>
+          <div class="creation_date">
+            <h1>11-01-19</h1>
+          </div>
+          <div class="mobiles_description">
+            Lorem1 ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            aperiam. Consequatur dolor eligendi eum atque molestiae accusamus
+            ipsam quod temporibus provident ratione aperiam, dolorem,
+            consequuntur alias hic sapiente laborum beatae?
+          </div>
+        </div>
+        <div class="mobiles mobiles2">
+          <div class="mobiles_title">
+            <h1>Projname</h1>
+          </div>
+          <div class="creation_date">
+            <h1>10-06-18</h1>
+          </div>
+          <div class="mobiles_description">
+            Lorem2 ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            aperiam. Consequatur dolor eligendi eum atque molestiae accusamus
+            ipsam quod temporibus provident ratione aperiam, dolorem,
+            consequuntur alias hic sapiente laborum beatae?
+          </div>
+        </div>
+        <div class="mobiles mobiles3">
+          <div class="mobiles_title">
+            <h1>Projname</h1>
+          </div>
+          <div class="creation_date">
+            <h1>18-11-20</h1>
+          </div>
+          <div class="mobiles_description">
+            Lorem3 ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            aperiam. Consequatur dolor eligendi eum atque molestiae accusamus
+            ipsam quod temporibus provident ratione aperiam, dolorem,
+            consequuntur alias hic sapiente laborum beatae?
+          </div>
+        </div>
+        <div id="mobiles_pres_invi">
+          <div class="close_mobiles_pres_invi">
+            <i class="fas fa-times"></i>
+          </div>
+
+          <div class="mobiles_pres_image_container">
+            <div class="mobiles_image"></div>
+            <div class="mobiles_image"></div>
+            <div class="mobiles_image"></div>
+          </div>
+          <div class="mobiles_pres_description_container">
+            <div>
+              <h2 class="mobiles_pres_title">...</h2>
+              <div class="mobiles_pres_description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                sapiente ut tenetur voluptatibus cumque? Molestias tempora
+                nulla aliquid deleniti quisquam itaque velit est at.
+              </div>
+              <div class="techno_use">
+                <div class="techno">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div class="techno">
+                  <i class="fab fa-sass"></i>
+                </div>
+                <div class="techno">
+                  <i class="fab fa-npm"></i>
+                </div>
+              </div>
+              <div class="go_to_project">
+                <div class="go_to_project_btn">
+                  <a href="">Go To Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="preso_work"></div>
+    </div>
+    <!-- ########################################################################## -->
+    <div class="all" id="designe">
+      <div id="designe_title">
+        <h1>My Designes</h1>
+      </div>
+      <div class="designe_container">
+
+      </div>
+
+    </div>
+    <!-- ########################################################################### -->
+    <div class="all" id="sckil">
+      <div id="sckil_navbar">
+        <div class="sckil_header">
+          <h1>Technos</h1>
+        </div>
+        <div class="sckils nodejs">
+          <i class="fab fa-node-js"></i>
+          <h1>node.js</h1>
+          <p>
+            node.js Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi tenetur quas veritatis, eaque iure adipisci harum incidunt
+            quidem dolor. Eaque hic accusantium harum omnis molestias
+            veritatis! Dolore quam sequi aspernatur!
+          </p>
+          <ul>
+            <li>
+              node.js Lorem ipsum dolor, sit amet consectetur adipisicing
+              elit. Nam voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+          </ul>
+        </div>
+        <div class="sckils">
+          <i class="fab fa-php"></i>
+          <h1>php</h1>
+          <p>
+            php Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            tenetur quas veritatis, eaque iure adipisci harum incidunt quidem
+            dolor. Eaque hic accusantium harum omnis molestias veritatis!
+            Dolore quam sequi aspernatur!
+          </p>
+          <ul>
+            <li>
+              php Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Nam voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+          </ul>
+          <!-- <p> </p> -->
+        </div>
+        <div class="sckils sckils_selected">
+          <i class="fab fa-js"></i>
+          <h1>javaScript</h1>
+          <p>
+            javaScript Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Sequi tenetur quas veritatis, eaque iure adipisci harum
+            incidunt quidem dolor. Eaque hic accusantium harum omnis molestias
+            veritatis! Dolore quam sequi aspernatur!
+          </p>
+          <ul>
+            <li>
+              javaScript Lorem ipsum dolor, sit amet consectetur adipisicing
+              elit. Nam voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+          </ul>
+        </div>
+        <div class="sckils">
+          <i class="fab fa-react"></i>
+          <h1>react</h1>
+          <p>
+            react Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi tenetur quas veritatis, eaque iure adipisci harum incidunt
+            quidem dolor. Eaque hic accusantium harum omnis molestias
+            veritatis! Dolore quam sequi aspernatur!
+          </p>
+          <ul>
+            <li>
+              react Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Nam voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+          </ul>
+        </div>
+        <div class="sckils">
+          <i class="fab fa-git-alt"></i>
+          <h1>git</h1>
+          <p>
+            react nativ Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Sequi tenetur quas veritatis, eaque iure adipisci harum
+            incidunt quidem dolor. Eaque hic accusantium harum omnis molestias
+            veritatis! Dolore quam sequi aspernatur!
+          </p>
+          <ul>
+            <li>
+              react nativ Lorem ipsum dolor, sit amet consectetur adipisicing
+              elit. Nam voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+          </ul>
+        </div>
+        <div class="sckils">
+          <i class="fab fa-html5"></i>
+          <h1>html</h1>
+          <p>
+            html Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi tenetur quas veritatis, eaque iure adipisci harum incidunt
+            quidem dolor. Eaque hic accusantium harum omnis molestias
+            veritatis! Dolore quam sequi aspernatur!
+          </p>
+          <ul>
+            <li>
+              html Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Nam voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+          </ul>
+        </div>
+        <div class="sckils">
+          <i class="fab fa-css3"></i>
+          <h1>css</h1>
+          <p>
+            css Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            tenetur quas veritatis, eaque iure adipisci harum incidunt quidem
+            dolor. Eaque hic accusantium harum omnis molestias veritatis!
+            Dolore quam sequi aspernatur!
+          </p>
+          <ul>
+            <li>
+              css nativ Lorem ipsum dolor, sit amet consectetur adipisicing
+              elit. Nam voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+          </ul>
+        </div>
+        <div class="sckils adob">
+          <i class="fab fa-adobe"></i>
+          <h1>adob</h1>
+          <p>
+            adob Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi tenetur quas veritatis, eaque iure adipisci harum incidunt
+            quidem dolor. Eaque hic accusantium harum omnis molestias
+            veritatis! Dolore quam sequi aspernatur!
+          </p>
+          <ul>
+            <li>
+              adob Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Nam voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi aliask
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              voluptatibus beatae labore fuga sequi tempora minima,
+              consequatur necessitatibus unde deserunt debitis nisi alias
+              rerum quibusdam harum modi non dignissimos cupiditate.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="techno_presantation_container">
+        <div class="techno_logo">
           <h1>
-            DESIGNER & FULL-STACK<br />
-            DEVELOPER
+            <i class="fab fa-js"></i>
           </h1>
         </div>
-
-        <div id="tel_gmail">
-          Mail: Pmomar44@gmail.com <br />
-          Tel: 77 727 86 55
-        </div>
-
-        <div id="home_logo">
-          <svg
-            id="logo"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 960 560"
-            style="enable-background: new 0 0 960 560"
-            xml:space="preserve"
-          >
-            <path
-              class="logo0"
-              d="M567.5,417.5c0.04,1.26,12-5,11-10l-44.06-126.3c-0.56-1.62-2.09-2.7-3.8-2.7h-54.06
-                c-1.89,0-3.6,1.08-4.42,2.78L444.5,338.5c-5.51,9.98-0.16,16.44,11,21l-97-1c13.18-1.89,17-5,21-12
-                c70.39-135.7,99.79-193.71,107.09-208.2c0.7-1.4,1.74-1.25,2.23,0.24c23.27,70.73,72.25,206.95,93.68,268.97
-                c2.83,8.67,12.12,9.75,14,10H567.5z"
-            />
-            <path
-              class="logo1"
-              d="M478.5,267.5c16-31,22.65-47.7,26.11-54.29c1.12-2.13,4.69-1.97,5.89,0.29l18.41,53.99
-                c0.54,2.71-2.36,7.06-5.23,7.12l-42.95-0.2C478.4,274.45,477.43,269.57,478.5,267.5z"
-            />
-            <path
-              class="logo2"
-              d="M569.5,136.5c87,0,86,0,86,0l110,109c-93,101-93,101-93,101c-5.43,7.28-1.95,10.44,5,12h-100l103-111
-                L569.5,136.5z"
-            />
-            <path
-              class="logo2"
-              d="M351.9,136.79c-87,0-86,0-86,0l-110,109c93,101,93,101,93,101c5.43,7.28,1.95,10.44-5,12h100l-103-111
-                L351.9,136.79z"
-            />
-          </svg>
-        </div>
-
-        <div class="network."></div>
-
-        <div class="network_container">
-          <a href="https://github.com/PapeMNdiaye1" target="_blank">
-            <div class="network">
-              <ion-icon name="logo-github"></ion-icon>
-            </div>
-          </a>
-
-          <a href="https://www.instagram.com/just.a.coder_/" target="_blank">
-            <div class="network">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </div>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/pape-momar-ndiaye-37b862199/"
-            target="_blank"
-          >
-            <div class="network">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-          </a>
-
-          <a href="" target="_blank">
-            <div class="network">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </div>
-          </a>
-          <a href="https://twitter.com/Ndiaye53287322" target="_blank">
-            <div class="network">
-              <ion-icon name="logo-tumblr"></ion-icon>
-            </div>
-          </a>
-        </div>
-
-        <div id="intro">
-          <h4 class="intro_title">
-            Lorem ipsum amet consectetur adipisicing elit deleniti saepe. Vitae
-            veritatis provident Lorem ipsum dolor sit amet g elit. Laborum modi
-            ipsquam accusamus, perspiciatis commodi veniam
+        <div class="techno_presantation">
+          <div class="techno_title">JavaScripte</div>
+          <h4>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Asperiores, animi rerum? Eos assumenda illo libero non alias est
+            saepe accusamus aliquid tenetur neque voluptates consequatur
+            quidem pariatur minima, amet nesciunt. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Asperiores, animi rerum? Eos
+            assumenda illo libero non alias est saepe accusamus aliquid
+            tenetur neque voluptates consequatur quidem pariatur minima, amet
+            nesciunt.
           </h4>
-        </div>
-      </div>
-      <!-- ########################################################################### -->
-      <div class="all" id="work">
-        <div id="work_title">
-          <h1>Mes Projets</h1>
-        </div>
-
-        <div id="work_navbar">
-          <div class="work_tabs active_tab">Web</div>
-          <div class="work_tabs">Mobile</div>
-          <div class="work_tabs">Perso</div>
-        </div>
-
-        <div id="pres_invi">
-          <div class="presantation">
-            <div id="close_pres">
-              <i class="fas fa-times"></i>
-            </div>
-            <div class="presantation_img"></div>
-            <h2 id="pres_title">Projname</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam ad
-              voluptatibus quas, dignissimos laboriosam assumenda temporibus
-            </p>
-            <div id="theSliders">
-              <div class="prev">
-                <ion-icon name="caret-back-outline"></ion-icon>
-              </div>
-              <div class="next">
-                <ion-icon name="caret-forward-outline"></ion-icon>
-              </div>
-            </div>
-            <div id="link">
-              <a href="nimp">
-                <h2>LIEN VER LE PRODUIT</h2>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="web_work web_work_visible">
-          <div class="stuffs_contain">
-            <div class="stuffs stuffs1">
-              <div class="stuffs_img">
-                <div class="stuffs_img_interne stuffs_img1a"></div>
-                <div class="stuffs_img_interne stuffs_img1b"></div>
-                <div class="stuffs_img_interne stuffs_img1c"></div>
-                <div class="stuffs_img_interne stuffs_img1d"></div>
-                <div class="stuffs_img_interne stuffs_img1e"></div>
-              </div>
-              <h2 class="stuffs_title">Geek Blog</h2>
-            </div>
-          </div>
-
-          <div class="stuffs_contain">
-            <div class="stuffs stuffs2">
-              <div class="stuffs_img">
-                <div class="stuffs_img_interne stuffs_img2a"></div>
-                <div class="stuffs_img_interne stuffs_img2b"></div>
-                <div class="stuffs_img_interne stuffs_img2c"></div>
-                <div class="stuffs_img_interne stuffs_img2d"></div>
-                <div class="stuffs_img_interne stuffs_img2e"></div>
-              </div>
-              <h2 class="stuffs_title">Projname</h2>
-            </div>
-          </div>
-
-          <div class="stuffs_contain">
-            <div class="stuffs stuffs3">
-              <div class="stuffs_img">
-                <div class="stuffs_img_interne stuffs_img3a"></div>
-                <div class="stuffs_img_interne stuffs_img3b"></div>
-                <div class="stuffs_img_interne stuffs_img3c"></div>
-                <div class="stuffs_img_interne stuffs_img3d"></div>
-                <div class="stuffs_img_interne stuffs_img3e"></div>
-              </div>
-              <h2 class="stuffs_title">Projname</h2>
-            </div>
-          </div>
-
-          <div class="stuffs_contain">
-            <div class="stuffs stuffs4">
-              <div class="stuffs_img">
-                <div class="stuffs_img_interne stuffs_img4a"></div>
-                <div class="stuffs_img_interne stuffs_img4b"></div>
-                <div class="stuffs_img_interne stuffs_img4c"></div>
-                <div class="stuffs_img_interne stuffs_img4d"></div>
-                <div class="stuffs_img_interne stuffs_img4e"></div>
-              </div>
-              <h2 class="stuffs_title">Projname</h2>
-            </div>
-          </div>
-
-          <div class="stuffs_contain">
-            <div class="stuffs stuffs5">
-              <div class="stuffs_img">
-                <div class="stuffs_img_interne stuffs_img5a"></div>
-                <div class="stuffs_img_interne stuffs_img5b"></div>
-                <div class="stuffs_img_interne stuffs_img5c"></div>
-                <div class="stuffs_img_interne stuffs_img5d"></div>
-                <div class="stuffs_img_interne stuffs_img5e"></div>
-              </div>
-              <h2 class="stuffs_title">Projname</h2>
-            </div>
-          </div>
-
-          <div class="stuffs_contain">
-            <div class="stuffs stuffs6">
-              <div class="stuffs_img">
-                <div class="stuffs_img_interne stuffs_img6a"></div>
-                <div class="stuffs_img_interne stuffs_img6b"></div>
-                <div class="stuffs_img_interne stuffs_img6c"></div>
-                <div class="stuffs_img_interne stuffs_img6d"></div>
-                <div class="stuffs_img_interne stuffs_img6e"></div>
-              </div>
-              <h2 class="stuffs_title">Projname</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="mobile_work">
-          <div class="mobiles mobiles1">
-            <div class="mobiles_title"><h1>Geek Blog</h1></div>
-            <div class="creation_date">
-              <h1>11-01-19</h1>
-            </div>
-            <div class="mobiles_description">
-              Lorem1 ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-              aperiam. Consequatur dolor eligendi eum atque molestiae accusamus
-              ipsam quod temporibus provident ratione aperiam, dolorem,
-              consequuntur alias hic sapiente laborum beatae?
-            </div>
-          </div>
-          <div class="mobiles mobiles2">
-            <div class="mobiles_title">
-              <h1>Projname</h1>
-            </div>
-            <div class="creation_date">
-              <h1>10-06-18</h1>
-            </div>
-            <div class="mobiles_description">
-              Lorem2 ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-              aperiam. Consequatur dolor eligendi eum atque molestiae accusamus
-              ipsam quod temporibus provident ratione aperiam, dolorem,
-              consequuntur alias hic sapiente laborum beatae?
-            </div>
-          </div>
-          <div class="mobiles mobiles3">
-            <div class="mobiles_title">
-              <h1>Projname</h1>
-            </div>
-            <div class="creation_date">
-              <h1>18-11-20</h1>
-            </div>
-            <div class="mobiles_description">
-              Lorem3 ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-              aperiam. Consequatur dolor eligendi eum atque molestiae accusamus
-              ipsam quod temporibus provident ratione aperiam, dolorem,
-              consequuntur alias hic sapiente laborum beatae?
-            </div>
-          </div>
-          <div id="mobiles_pres_invi">
-            <div class="close_mobiles_pres_invi">
-              <i class="fas fa-times"></i>
-            </div>
-
-            <div class="mobiles_pres_image_container">
-              <div class="mobiles_image"></div>
-              <div class="mobiles_image"></div>
-              <div class="mobiles_image"></div>
-            </div>
-            <div class="mobiles_pres_description_container">
-              <div>
-                <h2 class="mobiles_pres_title">...</h2>
-                <div class="mobiles_pres_description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  sapiente ut tenetur voluptatibus cumque? Molestias tempora
-                  nulla aliquid deleniti quisquam itaque velit est at.
-                </div>
-                <div class="techno_use">
-                  <div class="techno">
-                    <i class="fab fa-react"></i>
-                  </div>
-                  <div class="techno">
-                    <i class="fab fa-sass"></i>
-                  </div>
-                  <div class="techno">
-                    <i class="fab fa-npm"></i>
-                  </div>
-                </div>
-                <div class="go_to_project">
-                  <div class="go_to_project_btn">
-                   <a href="">Go To Project</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="preso_work"></div>
-      </div>
-      <!-- ########################################################################## -->
-      <div class="all" id="designe">
-        <div id="designe_title">
-            <h1>My Designes</h1>
-        </div>
-        <div class="designe_container">
-          <div class="designe_overlay">
-            <div class="courente_designe"></div>
-          </div>
-          <div class="all_designes_container">
-            <div class="designe_nav">
-
-              <ion-icon name="caret-back-outline"></ion-icon>
-              
-            </div>
-            <div class="designes_slider_container">
-              <div class="designes_movers">
-                <div class="one_designe"></div>
-                <div class="one_designe"></div>
-                <div class="one_designe"></div>
-                <div class="one_designe"></div>
-                <div class="one_designe"></div>
-                <div class="one_designe"></div>
-                <div class="one_designe"></div>
-                <div class="one_designe"></div>
-                <div class="one_designe"></div>
-                <div class="one_designe"></div>
-                </div>
-              </div>
-              <div class="designe_nav">
-                
-                <ion-icon name="caret-forward-outline"></ion-icon>
-              </div>
-          </div>
-        </div>
-      </div>
-      <!-- ########################################################################### -->
-      <div class="all" id="sckil">
-        <div id="sckil_navbar">
-            <div class="sckil_header">
-            <h1>Technos</h1>
-          </div>
-          <div class="sckils nodejs">
-            <i class="fab fa-node-js"></i>
-            <h1>node.js</h1>
-                <p>
-              node.js Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sequi tenetur quas veritatis, eaque iure adipisci harum incidunt
-              quidem dolor. Eaque hic accusantium harum omnis molestias
-              veritatis! Dolore quam sequi aspernatur!
-            </p>
-            <ul>
-              <li>
-                node.js Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Nam voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-            </ul>
-          </div>
-          <div class="sckils">
-            <i class="fab fa-php"></i>
-            <h1>php</h1>
-            <p>
-              php Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              tenetur quas veritatis, eaque iure adipisci harum incidunt quidem
-              dolor. Eaque hic accusantium harum omnis molestias veritatis!
-              Dolore quam sequi aspernatur!
-            </p>
-            <ul>
-              <li>
-                php Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nam voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-            </ul>
-            <!-- <p> </p> -->
-          </div>
-          <div class="sckils sckils_selected">
-            <i class="fab fa-js"></i>
-            <h1>javaScript</h1>
-            <p>
-              javaScript Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Sequi tenetur quas veritatis, eaque iure adipisci harum
-              incidunt quidem dolor. Eaque hic accusantium harum omnis molestias
-              veritatis! Dolore quam sequi aspernatur!
-            </p>
-            <ul>
-              <li>
-                javaScript Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Nam voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-            </ul>
-          </div>
-          <div class="sckils">
-            <i class="fab fa-react"></i>
-            <h1>react</h1>
-            <p>
-              react Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sequi tenetur quas veritatis, eaque iure adipisci harum incidunt
-              quidem dolor. Eaque hic accusantium harum omnis molestias
-              veritatis! Dolore quam sequi aspernatur!
-            </p>
-            <ul>
-              <li>
-                react Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nam voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-            </ul>
-          </div>
-          <div class="sckils">
-            <i class="fab fa-git-alt"></i>
-            <h1>git</h1>
-            <p>
-              react nativ Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Sequi tenetur quas veritatis, eaque iure adipisci harum
-              incidunt quidem dolor. Eaque hic accusantium harum omnis molestias
-              veritatis! Dolore quam sequi aspernatur!
-            </p>
-            <ul>
-              <li>
-                react nativ Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Nam voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-            </ul>
-          </div>
-          <div class="sckils">
-            <i class="fab fa-html5"></i>
-            <h1>html</h1>
-            <p>
-              html Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sequi tenetur quas veritatis, eaque iure adipisci harum incidunt
-              quidem dolor. Eaque hic accusantium harum omnis molestias
-              veritatis! Dolore quam sequi aspernatur!
-            </p>
-            <ul>
-              <li>
-                html Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nam voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-            </ul>
-          </div>
-          <div class="sckils">
-            <i class="fab fa-css3"></i>
-            <h1>css</h1>
-            <p>
-              css Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              tenetur quas veritatis, eaque iure adipisci harum incidunt quidem
-              dolor. Eaque hic accusantium harum omnis molestias veritatis!
-              Dolore quam sequi aspernatur!
-            </p>
-            <ul>
-              <li>
-                css nativ Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Nam voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-            </ul>
-          </div>
-          <div class="sckils adob">
-            <i class="fab fa-adobe"></i>
-            <h1>adob</h1>
-            <p>
-              adob Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sequi tenetur quas veritatis, eaque iure adipisci harum incidunt
-              quidem dolor. Eaque hic accusantium harum omnis molestias
-              veritatis! Dolore quam sequi aspernatur!
-            </p>
-            <ul>
-              <li>
-                adob Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nam voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi aliask
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                voluptatibus beatae labore fuga sequi tempora minima,
-                consequatur necessitatibus unde deserunt debitis nisi alias
-                rerum quibusdam harum modi non dignissimos cupiditate.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="techno_presantation_container">
-          <div class="techno_logo">
-            <h1>
-              <i class="fab fa-js"></i>
-            </h1>
-          </div>
-          <div class="techno_presantation">
-            <div class="techno_title">JavaScripte</div>
-            <h4>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores, animi rerum? Eos assumenda illo libero non alias est
-              saepe accusamus aliquid tenetur neque voluptates consequatur
-              quidem pariatur minima, amet nesciunt. Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Asperiores, animi rerum? Eos
-              assumenda illo libero non alias est saepe accusamus aliquid
-              tenetur neque voluptates consequatur quidem pariatur minima, amet
-              nesciunt.
-            </h4>
-            <!-- <div class="model">
+          <!-- <div class="model">
               ES6
             </div> -->
-          </div>
-          <div class="techno_experienc">
-            <div class="techno_title"></div>
-            <h4>
-              <ul>
-                <li>
-                  javaScript Lorem ipsum dolor, sit amet consectetur
-                  adipisicingk elit. Nam voluptatibus beatae labore fuga sequi
-                  tempora minima, consequatur necessitatibus unde deserunt
-                  debitis nisi alias rerum quibusdam harum modi non dignissimos
-                  cupiditate.
-                </li>
-                <li>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                  voluptatibus beatae labore fuga sequi tempora minima,
-                  consequatur necessitatibus unde deserunt debitis nisi alias
-                  rerum quibusdam harum modi non dignissimos cupiditate.
-                </li>
-                <li>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                  voluptatibus beatae labore fuga sequi tempora minima,
-                  consequatur necessitatibus unde deserunt debitis nisi alias
-                  rerum quibusdam harum modi non dignissimos cupiditate.
-                </li>
-              </ul>
-            </h4>
-            <!-- <div class="model">
+        </div>
+        <div class="techno_experienc">
+          <div class="techno_title"></div>
+          <h4>
+            <ul>
+              <li>
+                javaScript Lorem ipsum dolor, sit amet consectetur
+                adipisicingk elit. Nam voluptatibus beatae labore fuga sequi
+                tempora minima, consequatur necessitatibus unde deserunt
+                debitis nisi alias rerum quibusdam harum modi non dignissimos
+                cupiditate.
+              </li>
+              <li>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+                voluptatibus beatae labore fuga sequi tempora minima,
+                consequatur necessitatibus unde deserunt debitis nisi alias
+                rerum quibusdam harum modi non dignissimos cupiditate.
+              </li>
+              <li>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+                voluptatibus beatae labore fuga sequi tempora minima,
+                consequatur necessitatibus unde deserunt debitis nisi alias
+                rerum quibusdam harum modi non dignissimos cupiditate.
+              </li>
+            </ul>
+          </h4>
+          <!-- <div class="model">
                  
             </div> -->
-          </div>
-        </div>
-      </div>
-      <!-- ########################################################################### -->
-      <div class="all" id="contact">
-        <div id="contact_title">
-          <h1>Contact</h1>
-        </div>
-        <div class="contact_container_flex">
-          <div class="contact_container">
-            <!-- <a href=""> -->
-            <div class="contact_cart">mail</div>
-            <!-- </a> -->
-            <!-- <a href=""> -->
-            <div class="contact_cart">github</div>
-            <!-- </a> -->
-            <a
-              href="https://www.linkedin.com/in/pape-momar-ndiaye-37b862199/"
-              target="_blank"
-            >
-              <div class="contact_cart">linkidin</div>
-            </a>
-            <a href="https://twitter.com/Ndiaye53287322" target="_blank">
-              <div class="contact_cart">twitter</div>
-            </a>
-            <a href="https://www.instagram.com/just.a.coder_/" target="_blank">
-              <div class="contact_cart">instagame</div>
-            </a>
-            <!-- <a href="" target="_blank"> -->
-            <div class="contact_cart">youtube</div>
-            <!-- </a> -->
-            <!-- <a href="" target="_blank"> -->
-            <div class="contact_cart">phone</div>
-            <!-- </a> -->
-          </div>
-          <div class="contact_cart_info">
-            <ion-icon name="mail"></ion-icon>
-            /Pmomar44@gmail.com
-          </div>
-          <div class="contact_cart_info">
-            <ion-icon name="logo-github"></ion-icon>
-            /PMomarmar01
-          </div>
-          <div class="contact_cart_info">
-            <ion-icon name="logo-linkedin"></ion-icon>
-            /Pmomar44@gmail.com
-          </div>
-          <div class="contact_cart_info">
-            <ion-icon name="logo-tumblr"></ion-icon>
-            /Pmomar44@gmail.com
-          </div>
-          <div class="contact_cart_info">
-            <ion-icon name="logo-instagram"></ion-icon>
-            /JUSTE_A_CODER
-          </div>
-          <div class="contact_cart_info">
-            <ion-icon name="logo-youtube"></ion-icon>
-            /Pmomar44@gmail.com
-          </div>
-          <div class="contact_cart_info">
-            <ion-icon name="call"></ion-icon>
-            :77-727-86-55
-          </div>
         </div>
       </div>
     </div>
-    <!-- #################################################################### -->
-    <!-- #################################################################### -->
-    <!-- #################################################################### -->
-    <!-- #################################################################### -->
-    <div id="param">
-      <div class="mode1"></div>
-      <div class="mode2"></div>
-      <div class="mode">
-        <div id="mode_check"></div>
+    <!-- ########################################################################### -->
+    <div class="all" id="contact">
+      <div id="contact_title">
+        <h1>Contact</h1>
       </div>
-      <div id="para_icon">
-        <ion-icon name="settings"></ion-icon>
+      <div class="contact_container_flex">
+        <div class="contact_container">
+          <!-- <a href=""> -->
+          <div class="contact_cart">mail</div>
+          <!-- </a> -->
+          <!-- <a href=""> -->
+          <div class="contact_cart">github</div>
+          <!-- </a> -->
+          <a href="https://www.linkedin.com/in/pape-momar-ndiaye-37b862199/" target="_blank">
+            <div class="contact_cart">linkidin</div>
+          </a>
+          <a href="https://twitter.com/Ndiaye53287322" target="_blank">
+            <div class="contact_cart">twitter</div>
+          </a>
+          <a href="https://www.instagram.com/just.a.coder_/" target="_blank">
+            <div class="contact_cart">instagame</div>
+          </a>
+          <!-- <a href="" target="_blank"> -->
+          <div class="contact_cart">youtube</div>
+          <!-- </a> -->
+          <!-- <a href="" target="_blank"> -->
+          <div class="contact_cart">phone</div>
+          <!-- </a> -->
+        </div>
+        <div class="contact_cart_info">
+          <ion-icon name="mail"></ion-icon>
+          :Pmomar44@gmail.com
+        </div>
+        <div class="contact_cart_info">
+          <ion-icon name="logo-github"></ion-icon>
+          :PMomarmar01
+        </div>
+        <div class="contact_cart_info">
+          <ion-icon name="logo-linkedin"></ion-icon>
+          :Pmomar44@gmail.com
+        </div>
+        <div class="contact_cart_info">
+          <ion-icon name="logo-tumblr"></ion-icon>
+          :Pmomar44@gmail.com
+        </div>
+        <div class="contact_cart_info">
+          <ion-icon name="logo-instagram"></ion-icon>
+          :JUSTE_A_CODER
+        </div>
+        <div class="contact_cart_info">
+          <ion-icon name="logo-youtube"></ion-icon>
+          :Pmomar44@gmail.com
+        </div>
+        <div class="contact_cart_info">
+          <ion-icon name="call"></ion-icon>
+          :77-727-86-55
+        </div>
       </div>
     </div>
-    <div id="param_extra"></div>
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    <script src=" 
+  </div>
+  <!-- #################################################################### -->
+  <!-- #################################################################### -->
+  <!-- #################################################################### -->
+  <!-- #################################################################### -->
+  <div id="param">
+    <div class="mode1"></div>
+    <div class="mode2"></div>
+    <div class="mode">
+      <div id="mode_check"></div>
+    </div>
+    <div id="para_icon">
+      <ion-icon name="settings"></ion-icon>
+    </div>
+  </div>
+  <div id="param_extra"></div>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src=" 
     https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js
     "></script>
-    <script src="./app.js" defer></script>
-    <!-- #################################################################### -->
-    <!-- #################################################################### -->
-    <!-- #################################################################### -->
-    <!-- #################################################################### -->
-  </body>
+  <script src="./app.js" defer></script>
+  <!-- #################################################################### -->
+  <!-- #################################################################### -->
+  <!-- #################################################################### -->
+  <!-- #################################################################### -->
+</body>
+
 </html>
